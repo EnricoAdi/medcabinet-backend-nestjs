@@ -5,7 +5,7 @@ import * as bcrypt from 'bcrypt';
 import { RegisterDto } from './dto/register.dto';
 import { JwtService } from '@nestjs/jwt';
 import { AuthGuard } from './auth.guard';
-import ROLE from 'src/enums/role.enum';
+import ROLE from '../enums/role.enum';
 
 @Controller('auth')
 export class AuthController {
