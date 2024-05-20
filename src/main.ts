@@ -9,9 +9,7 @@ async function bootstrap() {
   app.enableCors({
     origin: "*",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
-    preflightContinue: false,
-    optionsSuccessStatus: 200,
-    credentials: true
+    optionsSuccessStatus: 200,  
   });
   // app.use(function (request: Request, response: Response, next: NextFunction) {
   //   response.setHeader('Access-Control-Allow-Origin', 'https://medcabinet-green.vercel.app');
