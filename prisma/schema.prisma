@@ -1,0 +1,59 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+//npx prisma init
+//npx prisma generate
+//npx prisma migrate dev
+//npx prisma db seed
+//npx prisma migrate reset
+
+model user{
+  user_id     Int         @id @default(autoincrement())
+  username    String      @unique
+  name  String
+  password  String
+  role String //0 user 1 admin
+  transaction transaction[]
+}
+
+model medicine{
+  medicine_id     Int         @id @default(autoincrement())
+  name  String
+  price  Int
+  stock  Int
+  image String
+  dtransaction dtransaction[]
+}
+
+model transaction{
+  transaction_id     Int         @id @default(autoincrement())
+  user_id     Int
+  total_quantity  Int
+  total_price  Int
+  created_at  DateTime @default(now())
+  user  user @relation(fields: [user_id], references: [user_id])
+  dtransaction dtransaction[]
+}
+
+model dtransaction{
+  dtrans_id Int @id @default(autoincrement())
+  transaction_id     Int 
+  medicine_id     Int
+  quantity  Int
+  price Int
+  created_at  DateTime @default(now())
+  medicine  medicine @relation(fields: [medicine_id], references: [medicine_id])
+  transaction  transaction @relation(fields: [transaction_id], references: [transaction_id])
+}
