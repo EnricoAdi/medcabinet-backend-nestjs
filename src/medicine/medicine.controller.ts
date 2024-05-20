@@ -2,11 +2,11 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Request, 
 import { MedicineService } from './medicine.service';
 import { CreateMedicineDto } from './dto/create-medicine.dto';
 import { UpdateMedicineDto } from './dto/update-medicine.dto';
-import { AuthGuard } from 'src/auth/auth.guard';
+import { AuthGuard } from '../auth/auth.guard';
 import ROLE from '../enums/role.enum';
 import { MutationStockMedicineDto } from './dto/mutation-stock-medicine.dto';
 import { CreateMassMedicineDto } from './dto/create-mass-medicine.dto';
-import toProperCase from 'src/utils/toProperCase';
+import toProperCase from '../utils/toProperCase';
 
 @Controller('medicine')
 export class MedicineController {

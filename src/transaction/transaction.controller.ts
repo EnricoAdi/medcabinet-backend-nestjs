@@ -1,8 +1,8 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Request, UnauthorizedException } from '@nestjs/common';
 import { TransactionService } from './transaction.service';
 import { CreateTransactionDto } from './dto/create-transaction.dto';
-import { AuthGuard } from 'src/auth/auth.guard';
-import toProperCase from 'src/utils/toProperCase';
+import { AuthGuard } from '../auth/auth.guard';
+import toProperCase from '../utils/toProperCase';
 
 @Controller('transaction')
 export class TransactionController {
