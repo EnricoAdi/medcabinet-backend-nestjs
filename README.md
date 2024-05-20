@@ -1,20 +1,16 @@
---create module
-module ini digunakan untuk menampung controller dan service
-nest g module <module_name>
+<img src="https://nestjs.com/logo-small-gradient.76616405.svg" width="100"/>
+<h1>Description</h1>
 
---create controller
-nest g controller <module_name>
+This repository implements the backend for a secure medicine stock management application built with <a href="https://nestjs.com/">NestJS</a>. It provides robust features for managing medications, users, and access control using industry-standard security practices.
 
+<h1>Key Technologies</h1>
+<li>NestJS: A scalable and modular Node.js framework for building robust and maintainable server-side applications.</li>
+<li>JWT (JSON Web Token): An industry-standard for secure authentication, ensuring user identity verification and authorization for accessing resources.</li>
+<li>Prisma: A modern ORM (Object-Relational Mapper) that simplifies database interactions with PostgreSQL, promoting type safety and developer productivity.</li>
+<li>PostgreSQL: A widely used, open-source relational database management system known for its reliability, performance, and scalability.</li>
 
---create service
-nest g service <module_name>
-
-
---nest g resource <module_name>
-resource di sini akan auto generatekan berdasarkan template yang diinginkan, seperti REST
-
-namafunc(@Param('id',ParseIntPipe) id:number) --> ini pipe buat otomatis parsing
-
-untuk validator bisa pakai
-class-validator class-transformer
-zod, joi, etc
+<h1>Features</h1>
+<li>Secure user registration and login using JWT for authentication. </li>
+<li>Role-based access control to restrict unauthorized access to sensitive data. </li>
+<li>CRUD (Create, Read, Update, Delete) operations for managing medications. </li>
+<li>Simple transaction for purchasing medicine </li>
