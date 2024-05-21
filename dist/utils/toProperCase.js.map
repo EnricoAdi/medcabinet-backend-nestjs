@@ -1,0 +1,1 @@
+{"version":3,"file":"toProperCase.js","sourceRoot":"","sources":["../../src/utils/toProperCase.ts"],"names":[],"mappings":";;AAAA,MAAM,YAAY,GAAG,CAAC,IAAY,EAAE,EAAE;IACpC,OAAO,IAAI,CAAC,WAAW,EAAE,CAAC,OAAO,CAAC,OAAO,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,WAAW,EAAE,CAAC,CAAC;AACnE,CAAC,CAAA;AACD,kBAAe,YAAY,CAAC"}
