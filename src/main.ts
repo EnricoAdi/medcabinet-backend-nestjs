@@ -5,12 +5,8 @@ import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
+  app.enableCors();
   app.setGlobalPrefix("api");
-  app.enableCors({
-    origin: "*",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
-    optionsSuccessStatus: 200,  
-  });
   // app.use(function (request: Request, response: Response, next: NextFunction) {
   //   response.setHeader('Access-Control-Allow-Origin', 'https://medcabinet-green.vercel.app');
   //   next();
