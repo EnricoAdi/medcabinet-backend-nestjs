@@ -4,7 +4,12 @@ import { ValidationPipe } from '@nestjs/common';
 // import { NextFunction, Request, Response } from 'express';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, { cors: true });
+  const app = await NestFactory.create(AppModule, { cors: {
+    origin: ['https://medcabinet-green.vercel.app', 'http://localhost:3002'],
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE, OPTIONS',
+    allowedHeaders: '*',
+    optionsSuccessStatus: 204,
+  } });
   app.enableCors();
   app.setGlobalPrefix("api");
   // app.use(function (request: Request, response: Response, next: NextFunction) {
