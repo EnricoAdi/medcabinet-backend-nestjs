@@ -5,7 +5,7 @@ import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: {
-    origin: ['https://medcabinet-green.vercel.app', 'http://localhost:3002'],
+    origin: "*",
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE, OPTIONS',
     allowedHeaders: '*',
     optionsSuccessStatus: 204,
